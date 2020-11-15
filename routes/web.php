@@ -15,7 +15,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () { return view('welcome'); });
 
 //----------------------------------------------------------------------------------------------------------------------------------
-
 Route::resource('posts',App\Http\Controllers\PostController::class);
 //----------------------------------------------------------------------------------------------------------------------------------
 
@@ -27,7 +26,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //----------------------------------------------------------------------------------------------------------------------------------
 Route::get('/info', [App\Http\Controllers\HomeController::class, 'info'])->name('info');
 //----------------------------------------------------------------------------------------------------------------------------------
-
+Route::get('/contact-us', function(){ return view('contact.send_email');})->name('contact-us');
 Route::get('/about',  function() { return view('about.index');})->name('about');
 //----------------------------------------------------------------------------------------------------------------------------------
 Route::get('/sendemail', 'App\Http\Controllers\SendEmailController@index');

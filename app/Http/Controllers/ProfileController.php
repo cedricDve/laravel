@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use  App\Models\User;
+
+use  App\Models\Post;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller
@@ -12,10 +14,11 @@ class ProfileController extends Controller
         // dd($user);
         // to get our user 
      $a = (User::find($user));
-     //dd($a);
+     $b = (Post::where("user_id" , "=",  $a->id))->get();
       
         return view('profile.index', [
             'user' => $a,
+            'posts' => $b,
         ]);
     }
 }

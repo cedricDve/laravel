@@ -14,13 +14,16 @@
 @section('table_name2', 'Collaborators')
 
 @section('description2')
+            <div  class="d-flex">
             @include('about.cardOne')  
             @include('about.cardTwo')  
+            @include('about.cardTree') 
+            </div>
 
                    
 @endsection
 
-@section('table_name3', 'Test')
+@section('table_name3', 'Contact-Us By Email')
 
 @section('description3')
                   

@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
+ 
     public function likes(){
         return $this->hasMany('\App\Models\Like');
     }

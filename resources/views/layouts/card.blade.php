@@ -1,5 +1,5 @@
 <div class="card pr-2" style="width: 18rem;">
-   @yield('card_image')
+     @yield('card_image')
     <div class="card-body">
         <h5 class="card-title">@yield('card_title')</h5>
         <p class="card-text">@yield('card_text')</p>

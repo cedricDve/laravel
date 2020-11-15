@@ -1,21 +1,20 @@
 @extends('layouts.card')
 
-
                 @section('card_title')
-                Laravel
+                Cisco
                 @overwrite
                 @section('card_text')
-                Laravel is dominating in the Frameworks !
+                One of the biggest network companies in the world.
                 @overwrite
                 @section('card_desc1')
-                Free& Fast
+                Trustfull Enterprise
                 @overwrite
                 @section('card_desc2')
-               -PHP Framework
+                Education and Certifications
                 @overwrite
                 @section('card_desc3')
-                Opensource
+                Global Network
                 @overwrite
                 @section('card_link')
-                <a href="https://www.laravel.com" target="_blank">Laravel</a>
+                <a href="https://www.Cisco.com" target="_blank">Cisco</a>
                 @overwrite

@@ -18,6 +18,7 @@
                 <p>{{ $content}}</p>
                 <h4 class="pl-2" style="font-size:16px;">Posted by : {{ $user_name}} </h4>
                 
+                
             
             
                 </div>
