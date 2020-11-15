@@ -32,10 +32,26 @@
                    
                    
                    
-                
+    <aside class="col-md-4 blog-sidebar">
+    
+
+      <div class="p-4">
+        <h4 class="font-italic">What I Used To Create This Website</h4>
+        <ol class="list-unstyled mb-0 p-3">
+          <li><a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/">Bootstrap documentation</a></li>
+          <li><a href="https://laravel.com/docs/8.x/">Laravel documentation 2014</a></li>
+          <li><a href="https://laracasts.com/discuss/channels/laravel/laravel-blade-at-include-vs-at-extends?page=0">Laracast platform/blog</a></li>
+          <li><a href="https://laravel.io/">Laravel io</a></li>
+          <li><a href="https://stackoverflow.com/">StackOverFlow</a></li>
+        
+        </ol>
+      </div>
+    </aside>      
 
                    
 @endsection
 
+
+   
 
 
