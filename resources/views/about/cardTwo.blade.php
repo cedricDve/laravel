@@ -1,0 +1,19 @@
+@extends('layouts.card')
+                @section('card_title')
+                Google
+                @overwrite
+                @section('card_text')
+                SUCE
+                @overwrite
+                @section('card_desc1')
+                SUCE
+                @overwrite
+                @section('card_desc2')
+                SUCE
+                @overwrite
+                @section('card_desc3')
+                SUCE
+                @overwrite
+                @section('card_link')
+                <a href="https://www.google.com" target="_blank">Google</a>
+                @overwrite
