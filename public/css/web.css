@@ -1,0 +1,156 @@
+/*
+
+
+BG
+#202020
+#1F2833
+#1b1b1b
+Blue:
+ #2eb2e2; 
+ #66FCF1
+#44E6C0
+Yellow: #ECFA37
+Green : #28a745
+
+
+*/
+/* Body :  font*/
+body{
+    font-family: Roboto , sans-serif;   
+}
+/* Headers :  bold*/
+h1, h2,h3,h4,h5 {
+    font-weight: 700;
+    color:  rgb(199, 199, 199);
+}
+p{
+    color: rgb(199, 199, 199);
+}
+
+a,i{
+    color: #28a745;
+}
+/* Navigation 
+     Navbar
+*/
+#bg-color, .nv,.posts , footer{     
+    background-image: radial-gradient(#222,#111);
+
+}
+
+.navbar a:hover{
+    color: #66FCF1;
+}
+.navbar a{
+    color:  #28a745;
+}
+.navbar-brand{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.search {
+    background-color: transparent;
+    border-color: #28a745;
+}
+.dropdown-menu{
+    background-color: #1b1b1b;
+}
+/* Header 
+  
+*/
+
+.header{
+    background-color:  #181f27;
+}
+.header-post{
+    position: relative;
+}
+.header-post-links{
+    /*-> Top right corner */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.header-post-links a {
+    padding: 1px 6px;
+    text-align: center;   
+    display: block;
+    background-color: #1b1b1b;
+    font-size:0.8rem ;
+}
+.header-post-content{
+    position: absolute;
+    padding-left: 10px;
+    bottom: 20px;
+} 
+.header-post-content img {
+    border: 2px solid #28a745;
+}
+img {
+    filter: grayscale(50%) brightness(0.8);
+}
+img.rounded-circle{
+    filter: none;
+}
+
+/* POSTS   */
+
+.post{
+    background-color: #181f27 ;
+    
+}
+.post>h3{
+    color: #28a745 ;
+
+}
+.post-p{
+    border-bottom: 1px solid #28a745 ;
+    padding: 1em 0px;
+}
+.post-p-span{
+    text-transform: capitalize;
+    font-weight: 700;
+    color:   #28a745 ;
+    font-size: 1.2rem;
+}
+
+.authors{
+  
+    border-left: 1px solid #28a745 ;
+    text-align: left;
+    padding-left: 1em;
+    margin: 0;
+   
+    
+}
+.authors p, h5 {
+    font-size: small;
+    overflow-wrap: break-word;
+   
+}
+.authors-span{
+    color:#28a745 ;
+
+}
+.authors-span-w{
+    color:rgb(153, 153, 153) ;
+
+}
+
+.author-t{
+    text-transform: capitalize;
+    
+}
+
+.author {
+    border-bottom: 1px solid #28a745 ;
+}
+.category{
+    border: 1px solid #28a745;
+    padding: 5px;
+}
+
+
+
+
+

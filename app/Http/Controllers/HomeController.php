@@ -15,12 +15,13 @@ class HomeController extends Controller
     {
         $this->middleware('auth');
     }
-
     /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+    //------------------------------------------------------------------------------------------------------------------------------------------------
+    //This function will return the home-view and pass the avatar and id of the authenticated user
     public function index()
     {
         $user = Auth()->user()->avatar;
@@ -30,9 +31,5 @@ class HomeController extends Controller
             'id' => $id,
         ]);
     }
-    public function info()
-    {
-        return view('info.index');
-    }
-
+  
 }

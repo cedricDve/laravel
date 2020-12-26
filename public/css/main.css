@@ -1,0 +1,48 @@
+body{
+    margin:0;
+    padding:0;
+}
+.s-a{
+    background-image: radial-gradient(#222,#111);
+  
+}
+.s-a input{
+    background-color: transparent;
+}
+.line{
+    padding-bottom: 1em;
+    border-bottom: 1px solid rgba(145, 145, 145, 0.3);
+    color: #f5f5f5 ;
+}
+.h{
+    padding: 3em 0 4em; 
+    color:  white;
+
+}
+.h img{
+    opacity: 0.6;
+}
+.post-h{
+ position: absolute;
+ bottom: 20px;
+ left: 40px;
+}
+.s-b p{
+    font-size: 12px;
+}
+.profile-modal{
+    color: black;
+}
+
+.clr-blue{
+    color: #2eb2e2; 
+}
+.green-underline{
+    text-decoration: underline   #28a745 ;
+}
+.update_user input{
+    border: 1px solid #2eb2e2;
+}
+/*Green: #28a745 
+Blue : #2eb2e2; */
+ 

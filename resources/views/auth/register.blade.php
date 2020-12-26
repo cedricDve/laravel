@@ -23,19 +23,7 @@
                                     </span>
                                 @enderror
                             </div>
-                        </div>
-
-
-                        <div class="form-group row">
-                            <label for="avatar" class="col-md-4 col-form-label text-md-right">Upload a profile-picture</label>
-
-                            <div class="col-md-6">
-                                <input id="avatar" type="file" class="form-control @error('avatar') is-invalid @enderror" name="avatar" value="{{ old('avatar') }}">
-                               <div>{{ $errors->first('avatar') }}</div>
-
-                            </div>
-                        </div>
-                        
+                        </div>                        
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
@@ -48,6 +36,25 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row">
+                            <label for="avatar" class="col-md-4 col-form-label text-md-right">Upload a profile-picture(avatar)</label>
+
+                            <div class="col-md-6">
+                                <input id="avatar" type="file" class="form-control @error('avatar') is-invalid @enderror" name="avatar" value="{{ old('avatar') }}">
+                               <div>{{ $errors->first('avatar') }}</div>
+
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="image" class="col-md-4 col-form-label text-md-right">Upload a banner-image</label>
+
+                            <div class="col-md-6">
+                                <input id="image" type="file" class="form-control @error('image') is-invalid @enderror" name="image" value="{{ old('image') }}">
+                               <div>{{ $errors->first('image') }}</div>
+
                             </div>
                         </div>
 

@@ -1,67 +1,115 @@
-@extends('layouts.app')
+@extends('layouts.appbuild')
+@section('only-for-index')
+<section class="section-h">
+    <div class="row header m-0">
+        <div class="col-sm-2 above-nav-links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="col-sm-10">
+            <div class="header-t">
+                <h1 style="font-size:3em; color: #fff;">IT'_ers.</h1>
+            </div>
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="row mb-2">
-            <div class="col-md-6">
-                <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                     <div class="col p-4 d-flex flex-column position-static">
-                         <strong class="d-inline-block mb-2 text-primary">Students</strong>
-                         <h3 class="mb-0">Are you a Student?</h3>
-                         <div class="mb-1 text-muted">Nov 12</div>
-                            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                             <a href="#" class="stretched-link">Continue reading</a>
-                        </div>
-                     <div class="col-auto d-none d-lg-block">
-                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">I will fill this later</text></svg>
-                    </div>
-                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                     <div class="col p-4 d-flex flex-column position-static">
-                         <strong class="d-inline-block mb-2 text-primary">Graduated Students</strong>
-                         <h3 class="mb-0">Are you a Graduated Student?</h3>
-                         <div class="mb-1 text-muted">Nov 12</div>
-                            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                             <a href="#" class="stretched-link">Continue reading</a>
-                        </div>
-                     <div class="col-auto d-none d-lg-block">
-                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">I will fill this later</text></svg>
-                    </div>
-                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                     <div class="col p-4 d-flex flex-column position-static">
-                         <strong class="d-inline-block mb-2 text-primary">Teachers</strong>
-                         <h3 class="mb-0">Are you a Teacher?</h3>
-                         <div class="mb-1 text-muted">Nov 12</div>
-                            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                             <a href="#" class="stretched-link">Continue reading</a>
-                        </div>
-                     <div class="col-auto d-none d-lg-block">
-                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">I will fill this later</text></svg>
-                    </div>
-                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                     <div class="col p-4 d-flex flex-column position-static">
-                         <strong class="d-inline-block mb-2 text-primary">Passionated & Others</strong>
-                         <h3 class="mb-0">Are you Passionated by IT ?</h3>
-                         <div class="mb-1 text-muted">Nov 12</div>
-                            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                             <a href="#" class="stretched-link">Continue reading</a>
-                        </div>
-                     <div class="col-auto d-none d-lg-block">
-                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">I will fill this later</text></svg>
-                    </div>
-                 </div>
-            </div>
-   
-         </div>
+        </div>
     </div>
-</div>
-@endsection
+    <div class="nav-fixed">
+        @section('content')
+    </div>
+
+    <section class="g-b">
+
+        <div class="g-b-b">
+            <img src="/images/header2.jpg" alt="">
+            <div class="g-b-b-c">
+                <h1 style="text-align:center; padding-top:2%;">Titel</h1>
+                <div class="row m-5">
+                    <div class="col-sm-8">
+                        <h2>Titel2</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, accusantium itaque. Quaerat
+                            architecto saepe modi facere explicabo sapiente quasi earum atque. Repellendus numquam iure
+                            nulla similique soluta maxime quis autem.</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <h2>Titel2</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, accusantium itaque. Quaerat
+                            architecto saepe modi facere explicabo sapiente quasi earum atque. Repellendus numquam iure
+                            nulla similique soluta maxime quis autem.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h2>Titel Content</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas numquam perferendis vitae
+                                voluptatum, dolor aspernatur eos, tempore incidunt vero modi possimus inventore ab nam
+                                eum voluptas delectus aliquid labore non.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <img class="img-fluid" src="/images/header.jpeg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam quibusdam nesciunt ex, mollitia
+                        quisquam et, nihil aut obcaecati rerum expedita est fugit repellendus officiis necessitatibus,
+                        sequi blanditiis placeat unde. Unde!</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8">
+                    <h2>Titel Content</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas numquam perferendis vitae
+                        voluptatum, dolor aspernatur eos, tempore incidunt vero modi possimus inventore ab nam eum
+                        voluptas delectus aliquid labore non.</p>
+
+                </div>
+                <div class="col-sm-4">
+                    <img class="img-fluid" src="/images/header.jpeg" alt="">
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="col-sm-8">
+                            <h2>Titel Content</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas numquam perferendis vitae
+                                voluptatum, dolor aspernatur eos, tempore incidunt vero modi possimus inventore ab nam
+                                eum voluptas delectus aliquid labore non.</p>
+                            <div class="col-sm-8">
+                                <h2>Titel Content</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas numquam perferendis
+                                    vitae voluptatum, dolor aspernatur eos, tempore incidunt vero modi possimus
+                                    inventore ab nam eum voluptas delectus aliquid labore non.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-4">
+                        <img class="img-fluid" src="/images/header.jpeg" alt="">
+                    </div>
+                    <div class="col-sm-8">
+                        <h2>Titel Content</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas numquam perferendis vitae
+                            voluptatum, dolor aspernatur eos, tempore incidunt vero modi possimus inventore ab nam eum
+                            voluptas delectus aliquid labore non.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    @endsection

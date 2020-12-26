@@ -57,6 +57,7 @@ class RegisterController extends Controller
             'biography' => ['required', 'string', 'min:20'],
             'status' => ['required', 'string'],
             'avatar'=> ['required','image'],
+            'image'=> ['required','image'],
             'gender' => ['required', 'string'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -87,6 +88,15 @@ class RegisterController extends Controller
             $avatar = request()->file('avatar')->getClientOriginalName();
             request()->file('avatar')->storeAs('avatars', $user->id . '/' . $avatar, '' );
             $user->update(['avatar' => $avatar]);
+
+        }
+        if( request()->hasFile('image'))
+        {
+            //php artisan storage:link  make it accessible -> storage/images/../..
+            //request -> global helper           config file systems
+            $image = request()->file('image')->getClientOriginalName();
+            request()->file('image')->storeAs('images', $user->id . '/' . $image, '' );
+            $user->update(['image' => $image]);
 
         }
 

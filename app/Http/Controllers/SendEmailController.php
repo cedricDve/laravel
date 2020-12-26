@@ -14,7 +14,12 @@ class SendEmailController extends Controller
     public function index(){
         return view('contact.send_email');
     }
-
+    //-----------------------------------------------------------------------------------------------
+    /* Able to send the email -> function send 
+                              -> request 
+                              -> validate data
+                              -> pass the data, send Mail
+    */
     function send(Request $request)
     {
      $this->validate($request, [
