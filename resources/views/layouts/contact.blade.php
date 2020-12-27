@@ -38,5 +38,5 @@
         <textarea name="message" class="form-control"></textarea>
     </div>
     <div class="form-group">
-        <input type="submit" name="send" class="btn btn-info" value="Send" />
+        <button type="submit" class="btn btn-info ">Send</button>
     </div>

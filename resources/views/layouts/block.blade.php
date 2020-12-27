@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.appbuild')
 
 @section('content')
 <div style="background-image: url('/images/bg.png');background-attachment: fixed;">

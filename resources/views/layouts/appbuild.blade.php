@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/home.css" type="text/css">
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -18,12 +19,22 @@
 </head>
 
 <body>
-    @yield('only-for-index')
-    <!-- NAVBAR -->
-    @include('layouts.navbar')
-   
+
+ <!-- Navigation Bar with Header, social Links and Navgiation Bar -->
+ <section class="s-a">
+        <div class="container pb-5">
+        @include('layout.navbar')
+      
+        </div>
+        </section>
+        <main>
     @yield('content')
-   
+
+    <main>
+
+  
+
+
 </body>
 </html>>
 

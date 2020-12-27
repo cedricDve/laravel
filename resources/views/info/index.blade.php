@@ -1,22 +1,6 @@
 @extends('layouts.appbuild')
-@section('only-for-index')
-<section class="section-h">
-    <div class="row header m-0">
-        <div class="col-sm-2 above-nav-links">
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-        <div class="col-sm-10">
-            <div class="header-t">
-                <h1 style="font-size:3em; color: #fff;">IT'_ers.</h1>
-            </div>
+@section('content')
 
-        </div>
-    </div>
-    <div class="nav-fixed">
-        @section('content')
-    </div>
 
     <section class="g-b">
 

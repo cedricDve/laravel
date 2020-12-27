@@ -1,7 +1,8 @@
 <section class="banner">
             <div class="container">
                 <div class="row justify-content-center pt-3">
-                    <h1 style="color:whitesmoke;font-weight:700;font-size:4em;">Welcome to the IT'_ers Community!</h1>
+                    <h1 class="mt-5 pt-2"style="color:whitesmoke;font-weight:500;font-size:3em;">Welcome to the IT'_ers Community!</h1>
+                    <div class="container p-5">
                     <div class="row mb-2">
                         <div class="col-md-6 col-sm-3 pt-1">
                             <div
@@ -90,7 +91,7 @@
                                         src="/images/pen-write.jpg" alt="Image of Somebody who is writing">
                                 </div>
                             </div>
-                        </div>
+                        </div></div>
 
                     </div>
                 </div>

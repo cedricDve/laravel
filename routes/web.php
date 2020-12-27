@@ -22,7 +22,6 @@ Route::get('/profile/{username}', [App\Http\Controllers\ProfileController::class
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 //----------------------------------------------------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------------------------------------------
 Route::get('/contact-us', function(){ return view('contact.send_email');})->name('contact-us');
@@ -37,11 +36,8 @@ Route::get('/ssearch','App\Http\Controllers\ProfileController@ssearch')->name('s
 //-------------TEST---------------------------------------------------------------------------------------------------------------------
 
 // Route::get('image/{filename}', 'HomeController@displayImage')->name('image.displayImage');
-
-Route::get('/test', function() { return view('profile.profile');})->name('profile_test');
+Route::get('/welcome', function() { return view('welcome');})->name('welcome');
 Route::get('/testA', function() { return view('layouts.home');})->name('home_test');
 Route::get('/info', function() { return view('info.index');})->name('info');
 
-
-Route::get('/p/{username}', [App\Http\Controllers\ProfileController::class, 'index'])->name('p.show');
 Route::post('updateUser', [App\Http\Controllers\ProfileController::class, 'update'])->name('updateUser');
