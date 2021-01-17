@@ -6,7 +6,7 @@ use App\Models\Post;
 use Illuminate\Http\Request;
 use Auth;
 use App\Models\User;
-
+use DB;
 
 class PostController extends Controller
 {
@@ -29,11 +29,13 @@ class PostController extends Controller
      */
     public function index()
     {
+        $cu = auth()->user();
+        //dd($cu->email);
         //show all posts
         $posts = Post::all();
         return view('posts.index',[
-            'posts' => $posts
-
+            'posts' => $posts,
+            'id'=>$cu->id
         ]);
     }
 
@@ -44,8 +46,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
-        
+        //        
         return view('posts.createPost');
         
     }
@@ -94,19 +95,24 @@ class PostController extends Controller
     public function show(Post $post)
     {
         //         dd($post->id);
-        $posts = $post->id;
+      
   
 
         $post_title = $post->title;
        $user = User::find($post->user_id);
        $user_name = $user->name;
+       $id = $user->id;
+       
+       $post_image = $post->post_image;
       
        
         $post_content = $post->content;
         return view('posts.post',[
-            'posts' => $posts ,
+            'id' => $id ,
+            'postId' => $post->id,
             'title' =>  $post_title ,
             'content' => $post_content,
+            'image' => $post_image,
             'user_name' => $user_name,
 
         ]);
@@ -121,6 +127,7 @@ class PostController extends Controller
     public function edit(Post $post)
     {
         //
+        return view('posts.edit')->with('post',$post);
     }
 
     /**
@@ -130,9 +137,25 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
-    {
-        //
+    public function update(Request $request, $id)
+    {     
+        $post = Post::find($id);
+        $postId= $post->id;
+        //dd($post->id);
+               
+        $request->validate([
+           'title' => [ 'string', 'max:255',],          
+           'content' => [ 'string'],
+       ]);
+     
+       $userUpdate=[
+           'title' => $request->title,
+           'content' => $request->content,           
+       ];       
+    
+      DB::table('posts')->where('id', $postId)->update($userUpdate);
+       return redirect()->back()->withErrors('Successfully updated!');;
+   
     }
 
     /**
@@ -143,6 +166,8 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+    //Forms do not support the DELETE method so you need to use the Laravel @method helper to tell Laravel you want to use the DELETE verb.
+        $post->delete();
+        return redirect()->back()->withErrors('Successfully deleted!');
     }
 }

@@ -1,7 +1,7 @@
 <div class="row col-sm-3">
-                <a class="mr-1" href="#"><i class="fab fa-twitter"></i></a>
-                <a class="mr-1" href="#"><i class="fab fa-facebook"></i></a>
-                <a class="mr-1" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="mr-1" href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a class="mr-1" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a class="mr-1" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
             <!-- Titel Webpage  -->
             <div class="row col-sm-12 line">
@@ -36,10 +36,10 @@
                                 Posts
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Write a Post</a>
-                                <a class="dropdown-item" href="#">Reed all Posts</a>
+                                <a class="dropdown-item" href="{{route('posts.create')}}">Write a Post</a>
+                                <a class="dropdown-item" href="{{route('posts.index')}}">Reed all Posts</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Find a Post</a>
+                                <a class="dropdown-item" href="{{route('ssearch')}}">Find a Post</a>
                             </div>
                         </li>
                     </ul>
@@ -48,5 +48,52 @@
                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form>
+                     <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                        @if (Route::has('login'))
+                        <li class="nav-item pr-2">
+
+                            <a class="nav-link btn btn-outline-success my-3 my-sm-0" href="{{ route('login') }}"
+                                aria-pressed="true">{{ __('Login') }}</a>
+
+
+                        </li>
+                        @endif
+
+                        @if (Route::has('register'))
+                        <li class="nav-item">
+
+                            <a class="nav-link btn btn-outline-success my-3 my-sm-0" href="{{ route('register') }}"
+                                aria-pressed="true">{{ __('Register') }}</a>
+
+
+                        </li>
+                        @endif
+                        @else
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }}
+                                <img class=" p-1"
+                                    src="/storage/avatars/{{  Auth::user()->id }}/{{ Auth::user()->avatar }}"
+                                    style="height:40px">
+                            </a>
+
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                        @endguest
+                    </ul>
                 </div>
             </nav>

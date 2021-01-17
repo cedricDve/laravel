@@ -69,16 +69,15 @@
                                                  <label for="email">Email:</label>
                                                  <input name="email" type="text" value="{{$user->email}}"><br>
                                                  <label for="status">Status:</label>
-                                                 <select name="status"
+                                                 <select 
                                                      class="form-control @error('status') is-invalid @enderror"
-                                                     name="status" value="{{ old('status') }}" autocomplete="status"
-                                                     value="{{$user->status}}">
+                                                     name="status">
                                                      <option value="student">Student</option>
                                                      <option value="teacher">Teacher</option>
                                                      <option value="other">Other</option>
                                                  </select>
                                                  <label for="u_bio">Biography:</label>
-                                                 <textarea id="u_bio" rows="6" cols="35">{{$user->biography}}</textarea>
+                                                 <textarea name="biography" id="u_bio" rows="6" cols="35">{{$user->biography}}</textarea>
                                                  <button type="submit" class="btn btn-outline-success">Save
                                                      changes</button>
                                              </form>
@@ -106,11 +105,8 @@
                              <h5><span class="clr-blue">@</span>Member since {{ $user->created_at}}</h5>
                          </div>
                          <div class="row col-sm-12">
-                             <h5 class="text-break">&nbsp Amount of Posts: 700(static)</h5>
-                         </div>
-                         <div class="row col-sm-12">
-                             <h5 class="text-break">&nbsp Amount of Likes: 900(static)</h5>
-                         </div>
+                             <h5 class="text-break">&nbsp Amount of Posts:<?php $id= auth()->id(); $users = DB::table('posts')->where('user_id',$id)->count();     ?>{{ $users }} 700(static)</h5>
+                         </div>                    
                      </div>
                  </div>
                

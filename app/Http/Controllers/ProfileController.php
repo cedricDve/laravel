@@ -52,10 +52,9 @@ class ProfileController extends Controller
         $userUpdate=[
             'name' => $request->name,
             'email' => $request->email,
-            'status' => $request->status
-        ];
-  
-        
+            'status' => $request->status,
+            'biography' =>$request->biography
+        ];        
    
      
         DB::table('users')->where('id', $id)->update($userUpdate);
