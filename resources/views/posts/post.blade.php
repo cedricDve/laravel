@@ -16,10 +16,7 @@
                             <h2 style="text-transform:capitalize;">{{ $title}}</h2>
                             <p>{{ $content}}</p>
                             <h4 class="pl-2" style="font-size:16px;">Posted by : {{ $user_name}} </h4>
-                            @if($image == null )
-                            <img class='img-fluid' src="/images/noImage.png"
-                                style="height:200px;">
-                                @else
+                            @if($image != null )                          
                             <img class='img-fluid' src="/storage/post_images/{{ $id }}/{{ $image }}"
                                 style="height:200px;">
                                 @endif

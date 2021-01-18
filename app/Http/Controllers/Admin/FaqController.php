@@ -15,11 +15,19 @@ class FaqController extends Controller
      */
     public function index($cat)
     {
+        $cu = auth()->user();
+        if($cu == null){
+            $cu_admin = 0;
+        }
+        else
+        $cu_admin= $cu->admin;
+      
         $faqs = DB::table('faq_models')->select('*')->where('category',$cat)->get();     
         $cats = FaqCategories::get();
+       
         
            
-        return view('admin.faq')->with(['faqs'=> $faqs,'cats'=> $cats]);
+        return view('admin.faq')->with(['faqs'=> $faqs,'cats'=> $cats,'admin' => $cu_admin]);
     }
 
     /**
@@ -29,7 +37,8 @@ class FaqController extends Controller
      */
     public function create()
     {
-        //
+        $cats = FaqCategories::get();
+        return view('admin.createFaq')->with('cats',$cats);
     }
 
     /**
@@ -41,6 +50,24 @@ class FaqController extends Controller
     public function store(Request $request)
     {
         //
+         //data validator
+         $validatedData = $request->validate([
+            'question' => ['required'], 
+            'categoryName' => ['required'],    
+            'shortansw' => ['required'],
+            'longansw' => ['required'],
+        ]);
+        $cat = FaqCategories::create(['name'=> $request->categoryName]);
+               
+       $faq = new FaqModel;
+       $faq->question = $request->question;
+       $faq->category = $cat->id;
+       $faq->shortansw = $request->shortansw;
+       $faq->longansw = $request->longansw;      
+       $faq->save();
+
+      return redirect('/faqs/'. $cat->id);
+      
     }
 
     /**

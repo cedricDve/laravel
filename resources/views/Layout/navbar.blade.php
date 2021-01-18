@@ -44,8 +44,8 @@
                         </li>
                     </ul>
                     <!-- Searchbar -> this will search for Users and Posts -->
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <form class="form-inline my-2 my-lg-0" action="{{ route('ssearch')}}" type="get" role="search" >
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="ssearch">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form>
                      <!-- Right Side Of Navbar -->
@@ -61,14 +61,10 @@
 
                         </li>
                         @endif
-
                         @if (Route::has('register'))
                         <li class="nav-item">
-
                             <a class="nav-link btn btn-outline-success my-3 my-sm-0" href="{{ route('register') }}"
                                 aria-pressed="true">{{ __('Register') }}</a>
-
-
                         </li>
                         @endif
                         @else
@@ -76,13 +72,23 @@
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
+                                @if( Auth::user()->avatar != null)
                                 <img class=" p-1"
                                     src="/storage/avatars/{{  Auth::user()->id }}/{{ Auth::user()->avatar }}"
                                     style="height:40px">
+                                    @endif
                             </a>
 
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            @if(Auth::user()->admin == 1)
+                            <a class="dropdown-item" href="/admin">
+                                    {{ __('Admin Panel') }}
+                                </a>
+                                @endif
+                            <a class="dropdown-item" href="/profile/{{ Auth::user()->id}}">
+                                    {{ __('My Profile') }}
+                                </a>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}

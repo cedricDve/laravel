@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             AdminSeeder::class,
             FaqSeeder::class,
             FaqCatSeeder::class,
+            CoursesSeeder::class,
         ]);        
     
     }

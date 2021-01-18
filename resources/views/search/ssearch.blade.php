@@ -26,7 +26,7 @@
 
 
 
-<div class="container">
+<div class="container mt-1">
     <style>
         #s-blue {
             color: #0275d8;
@@ -80,7 +80,7 @@
                         </div>
                     </div>
                     @endforeach
-                    @else <h1 style="color: #0275d8;">We find no Posts related to your search <h1>
+                    @else <h1  style="color: #0275d8; border: 1px solid black; padding: 1em">We find no Posts related to your search <h1>
                             @endif
 
                             @if(isset($u))
@@ -122,5 +122,7 @@
                                     @endforeach
                                     @else <h1 style="color: #0275d8;">We find no Authors related to your search <h1>
                                             @endif
+
+                                            </div>
 
                                             @endsection

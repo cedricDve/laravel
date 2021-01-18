@@ -2,16 +2,16 @@
 
 
                 @section('card_title')
-                Laravel
+                LaravelDoc
                 @overwrite
                 @section('card_text')
-                Laravel is dominating in the Frameworks !
+                Laravel is dominating in the Frameworks and also providing an Excelent Documentation
                 @overwrite
                 @section('card_desc1')
-                Free& Fast
+               Code snippets & Examples
                 @overwrite
                 @section('card_desc2')
-               -PHP Framework
+               -Theory
                 @overwrite
                 @section('card_desc3')
                 Opensource

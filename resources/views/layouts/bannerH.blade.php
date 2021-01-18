@@ -65,7 +65,7 @@
                                 <p class="card-text mb-auto">Able to help everyone with questions and problems
                                     related to our website we create a FAQ-page.
                                 </p>
-                                <p><a href="#"><i class="fas fa-arrow-right"></i>Go to FAQ-Page</a></p>
+                                <p><a href="{{ url('/faqs/1') }}"><i class="fas fa-arrow-right"></i>Go to FAQ-Page</a></p>
                             </div>
                             <div class="col-auto d-none d-lg-block">
                                 <!--  class="" -->
@@ -83,7 +83,7 @@
                                 <h3 class="mb-0 pb-1">Info-Page </h3>
                                 <p class="card-text mb-auto">Explaining and showing code snippets of the website. Discover how the website has been built, and maybe help us improve the website or learn more about some features we used.
                                 </p>
-                                <p><a href="#"><i class="fas fa-arrow-right"></i> Learn more</a></p>
+                                <p><a href="{{ route('info') }}"><i class="fas fa-arrow-right"></i> Learn more</a></p>
                              
 
                             </div>

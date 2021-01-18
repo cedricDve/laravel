@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class UpdateUsersAddAdmin extends Migration
+class CreateCourseParticipantsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,15 @@ class UpdateUsersAddAdmin extends Migration
      */
     public function up()
     {
-        //
-        Schema::table('users', function(Blueprint $table){
-            $table->boolean('admin')->after('password')->default(0);
+        Schema::create('course_participants', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('email');
+            $table->integer('course_id');           
+            $table->timestamps();
         });
     }
+
     /**
      * Reverse the migrations.
      *
@@ -25,6 +29,6 @@ class UpdateUsersAddAdmin extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('course_participants');
     }
 }

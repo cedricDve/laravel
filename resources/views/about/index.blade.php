@@ -7,11 +7,10 @@
                    <h1 style="font-size: 35px">IT'_ers Community count <span style="font-weight: bold"><?php $users = DB::table('users')->count();?>{{ $users }}</span> Active Users !</h1>
                    <h1>Our main goal is to create a great community where respect and sharing are the keywords</h1>
                    </div>
-
                    
 @endsection
 
-@section('table_name2', 'Collaborators')
+@section('table_name2', 'Best Tools')
 
 @section('description2')
             <div  class="d-flex">
@@ -19,44 +18,40 @@
             @include('about.cardTwo')  
             @include('about.cardTree') 
             </div>
-
                    
 @endsection
 
 @section('table_name3', 'Contact-Us By Email')
 
-@section('description3')
-                  
+@section('description3')                  
                
-    @include('layouts.contact')                    
+    @include('layouts.contact')
                    
-                   
-    <aside class="col-md-12 blog-sidebar">
-    
+    <aside class="col-md-12 blog-sidebar">  
 
       <div class="p-4">
         <h4 class="font-italic">What I Used To Create This Website</h4>
         <ol class="list-unstyled mb-0 p-3">
-          <li><a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/">Bootstrap documentation</a></li>
-          <li><a href="https://laravel.com/docs/8.x/">Laravel documentation 2014</a>
+          <li><a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/" target="_blank">Bootstrap documentation</a></li>
+          <li><a href="https://laravel.com/docs/8.x/" target="_blank">Laravel documentation 2014</a>
           <ol class="list-unstyled mb-0 p-3">
-          <li><a href="  https://laravel.com/docs/8.x/queries">db queries</a></li>
-          <li><a href="https://laravel.com/docs/8.x/routing">routing</a></li>
-          <li><a href="https://laravel.com/docs/8.x/routing">urls</a></li>
+          <li><a href="  https://laravel.com/docs/8.x/queries" target="_blank">db queries</a></li>
+          <li><a href="https://laravel.com/docs/8.x/routing" target="_blank">routing</a></li>
+          <li><a href="https://laravel.com/docs/8.x/routing" target="_blank">urls</a></li>
           </ol>
           </li>
 
         
-          <li><a href="https://laracasts.com/discuss/channels/laravel/laravel-blade-at-include-vs-at-extends?page=0">Laracast platform/blog</a></li>
-          <li><a href="https://laravel.io/">Laravel io</a></li>
-          <li><a href="https://stackoverflow.com/">StackOverFlow</a>
+          <li><a href="https://laracasts.com/discuss/channels/laravel/laravel-blade-at-include-vs-at-extends?page=0" target="_blank">Laracast platform/blog</a></li>
+          <li><a href="https://laravel.io/" target="_blank">Laravel io</a></li>
+          <li><a href="https://stackoverflow.com/" target="_blank">StackOverFlow</a>
           <ol class="list-unstyled mb-0 p-3">
-          <li><a href="https://stackoverflow.com/questions/46118148/laravel-get-a-random-user-with-where-clause?noredirect=1">random elements from table</a></li>
-          <li><a href="https://stackoverflow.com/questions/37511893/laravel-custom-trait-not-found">errors</a></li>
-          <li><a href="https://stackoverflow.com/questions/65546549/how-to-destroy-a-record-using-a-form-in-laravel-and-display-status">destroy</a></li>
+          <li><a href="https://stackoverflow.com/questions/46118148/laravel-get-a-random-user-with-where-clause?noredirect=1" target="_blank">random elements from table</a></li>
+          <li><a href="https://stackoverflow.com/questions/37511893/laravel-custom-trait-not-found" target="_blank">errors</a></li>
+          <li><a href="https://stackoverflow.com/questions/65546549/how-to-destroy-a-record-using-a-form-in-laravel-and-display-status" target="_blank">destroy</a></li>
           </ol>
           </li>
-      
+          <li><a href="https://therichpost.com/laravel-7-sidebar-responsive-template/" target="_blank">Layout Admin panel</a></li>       
         
         </ol>
       </div>

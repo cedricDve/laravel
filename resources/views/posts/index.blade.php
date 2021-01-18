@@ -11,11 +11,7 @@
                     <!-- PostB 1-->
                     <div class="row mt-5 shadow">
                         <div class="col-sm-4">
-                        @if($post->post_image == null)
-                        <img class="img-fluid"
-                                src="/images/noImage.png"
-                                alt="ImageOfPost">
-                                @else
+                        @if($post->post_image != null)                 
                             <img class="img-fluid"
                                 src="/storage/post_images/{{  $post->user_id }}/{{ $post->post_image }}"
                                 alt="ImageOfPost">

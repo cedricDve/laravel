@@ -31,14 +31,9 @@
         @include('layout.profilebanner')
         </div>
         </section>
-
-
     <main>
     @yield('content')
-
     <main>
-
-
 </body>
 </html>
 

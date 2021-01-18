@@ -4,8 +4,8 @@
                 Google
                 @endsection
                 @section('card_text','Who dont know Google ?')
-                @section('card_desc1','Browser')
-                @section('card_desc2','Education')
+                @section('card_desc1','Fast Browser')
+                @section('card_desc2','Find answers fast')
                 @section('card_desc3')
                 Services & API's
                 @endsection

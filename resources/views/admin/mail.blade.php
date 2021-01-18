@@ -3,27 +3,24 @@
 @section('content')
 @foreach($email as $mail)
 <div class="container">
-<div class="row mt-1 shadow">
-    <div class="col-sm-4">
-        <img class="img-fluid" src="/images/newMail.png" alt="ImageOfNewEmail">
-    </div>
-
-    <div class="col-sm-6">
-        <div class="row col-sm-12">
-            <h2>From: {{ $mail->name }}</h2>
-
+    <div class="row mt-1 shadow">
+        <div class="col-sm-4">
+            <img class="img-fluid" src="/images/newMail.png" alt="ImageOfNewEmail">
         </div>
-        <div class="row col-sm-12">
-            <p>&nbsp ~ &nbsp {{$mail->email}} </p>
-        </div>
-        <div class="row col-sm-12">
-            <h3>Subject: {{$mail->subject}}</h3>
-        </div>
-
-        <div class="row col-sm-12">
-            <p>Message: {{$mail->message}}</p>
-        </div>
-        <!--
+        <div class="col-sm-6">
+            <div class="row col-sm-12">
+                <h2>From: {{ $mail->name }}</h2>
+            </div>
+            <div class="row col-sm-12">
+                <p>&nbsp ~ &nbsp {{$mail->email}} </p>
+            </div>
+            <div class="row col-sm-12">
+                <h3>Subject: {{$mail->subject}}</h3>
+            </div>
+            <div class="row col-sm-12">
+                <p>Message: {{$mail->message}}</p>
+            </div>
+            <!--
         <div class="row">
             <div class="col-sm-6">
             <form method="POST" action="{{ route('deleteMail')  }}">
@@ -37,15 +34,14 @@
             <a href="{{ route('deleteMail', $mail->email) }}">  <button type="submit" class="btn btn-outline-danger mr-4">Delete</button></a>
           
         </div>  -->
-        <div class="row col-sm-12 d-flex mt-2">
-            <p>@ {{$mail->created_at}}</p>
+            <div class="row col-sm-12 d-flex mt-2">
+                <p>@ {{$mail->created_at}}</p>
+            </div>
         </div>
     </div>
 </div>
-</div>
 
 <div class="row mt-5 shadow">
-
     <div class="container box">
         <h3>Reply To {{ $mail->name }}</h3><br />
         <!--Validation -->
@@ -67,7 +63,6 @@
         @endif
         <!--Form: input -->
         <form method="POST" action="{{ route('replyMail') }}">
-       
             @csrf
             <div class="form-group">
                 <label>Enter Your Message</label>
@@ -80,9 +75,8 @@
             <div class="form-group">
                 <button type="submit" class="btn btn-outline-success mr-4">Send</button>
             </div>
-            </form>
-
+        </form>
     </div>
-    </div>
-    @endforeach
-    @endsection
+</div>
+@endforeach
+@endsection
