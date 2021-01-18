@@ -33,21 +33,21 @@
         <h5 class="card-title">{{  $faq->category }}</h5>
         <h4 class="card-title">{{  $faq->question }}</h4>
         <p>
-            <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button"
-                aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2"
-                aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+            <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1{{  $faq->id }}" role="button"
+                aria-expanded="false" aria-controls="multiCollapseExample1{{  $faq->id }}">Show short answer</a>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2{{  $faq->id }}"
+                aria-expanded="false" aria-controls="multiCollapseExample2{{  $faq->id }}">Show long answer</button>
         </p>
         <div class="row">
             <div class="col">
-                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="collapse multi-collapse" id="multiCollapseExample1{{  $faq->id }}">
                     <div class="card card-body">
                         {{  $faq->shortansw }}
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="collapse multi-collapse" id="multiCollapseExample2">
+                <div class="collapse multi-collapse" id="multiCollapseExample2{{  $faq->id }}">
                     <div class="card card-body">
                         {{  $faq->longansw }}
                     </div>

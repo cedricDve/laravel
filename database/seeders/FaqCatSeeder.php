@@ -15,10 +15,10 @@ class FaqCatSeeder extends Seeder
     {
         //
         FaqCategories::create([
-            'name'=>"Cat1"
+            'name'=>"Data Policies"
         ]);
         FaqCategories::create([
-            'name'=>"Cat2"
+            'name'=>"Website Usage"
         ]);
     }
 }

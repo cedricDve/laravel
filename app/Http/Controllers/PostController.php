@@ -30,12 +30,16 @@ class PostController extends Controller
     public function index()
     {
         $cu = auth()->user();
+        if($cu == null)
+        $cu_id=0;
+        else
+        $cu_id= $cu->id;
         //dd($cu->email);
         //show all posts
         $posts = Post::all();
         return view('posts.index',[
             'posts' => $posts,
-            'id'=>$cu->id
+            'id'=>$cu_id
         ]);
     }
 

@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/courses', [App\Http\Controllers\CoursesController::class, 'index'])->name('courses.index');
-Route::post('/coursesBuy', [App\Http\Controllers\CoursesController::class, 'buy'])->name('courses.buy');
+Route::post('/coursesBuy/{id}', [App\Http\Controllers\CoursesController::class, 'buy'])->name('courses.buy');
 
 
 Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name('welcome');
